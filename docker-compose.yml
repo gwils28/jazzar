@@ -1,0 +1,39 @@
+# Jazzar — infrastructure locale.
+# Le backend (GPU pour les embeddings) et le frontend tournent sur l'hôte via `make`.
+# Seuls Postgres+pgvector et Redis sont conteneurisés.
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: jazzar-db
+    environment:
+      POSTGRES_USER: jazzar
+      POSTGRES_PASSWORD: jazzar
+      POSTGRES_DB: jazzar
+    ports:
+      - "5433:5432"
+    volumes:
+      - jazzar-pgdata:/var/lib/postgresql/data
+      - ./infra/init.sql:/docker-entrypoint-initdb.d/00-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jazzar -d jazzar"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    container_name: jazzar-redis
+    command: ["redis-server", "--save", "60", "1", "--maxmemory", "512mb", "--maxmemory-policy", "allkeys-lru"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - jazzar-redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  jazzar-pgdata:
+  jazzar-redis:

@@ -1,0 +1,38 @@
+{
+  "app": {"name": "Jazzar", "tagline": "Quatre-vingt-dix ans d'archives jazz, interrogeables.", "offline": "IA hors ligne", "online": "IA en ligne", "loading": "Chargement…"},
+  "nav": {"ask": "Demander", "explore": "Explorer", "dossiers": "Dossiers", "insights": "Insights", "library": "Bibliothèque", "observatory": "Observatoire"},
+  "ask": {
+    "title": "Posez une question à l'archive",
+    "subtitle": "Chaque affirmation est reliée à sa source. Pas de source, pas de réponse.",
+    "placeholder": "Ex. Quelle note a reçu Kind of Blue, et qui joue du piano sur Freddie Freeloader ?",
+    "send": "Envoyer", "stop": "Arrêter",
+    "examples": ["Quels musiciens jouent sur A Love Supreme ?", "Résume l'évolution de la critique sur le free jazz dans les années 60.", "Qui a remporté le saxophone ténor au Critics Poll 1965 ?", "Quelle est la note moyenne des albums de fusion par rapport au hard bop ?"],
+    "route": "Route", "cached": "Servi depuis le cache sémantique", "sources": "Sources", "thinking": "Recherche dans l'archive…",
+    "redirect_bi": "Cette question est quantitative : elle a été transmise au moteur Insights.",
+    "feedback_up": "Réponse utile", "feedback_down": "Réponse à revoir", "feedback_thanks": "Merci, votre avis entraîne le routeur.",
+    "filters": "Filtres", "year_from": "De", "year_to": "À", "doc_types": "Types", "no_cache": "Ignorer le cache",
+    "cost": "coût", "latency": "latence", "model": "modèle"
+  },
+  "explore": {"title": "Explorer l'archive", "subtitle": "Recherche hybride : sémantique + mots-clés, avec filtres exacts.", "placeholder": "Mots-clés ou phrase…", "search": "Rechercher", "hybrid": "Hybride", "keyword": "Mots-clés seuls", "results": "résultats", "none": "Aucun résultat.", "page": "p.", "open": "Ouvrir le document"},
+  "dossiers": {
+    "title": "Dossiers de recherche", "subtitle": "Une équipe d'agents planifie, cherche, rédige et vérifie un livrable sourcé.",
+    "brief": "Commande", "placeholder": "Ex. Prépare un dossier sur l'évolution de la scène jazz de Chicago entre 1965 et 1975 : critiques majeures, artistes émergents, contexte social.",
+    "create": "Lancer le dossier", "status": {"queued": "En file", "planning": "Planification", "researching": "Recherche", "writing": "Rédaction", "reviewing": "Vérification", "done": "Terminé", "failed": "Échec"},
+    "steps": "Journal des agents", "plan": "Plan", "sources": "Sources citées", "export": "Exporter en Markdown", "empty": "Aucun dossier pour l'instant.", "cost": "Coût"
+  },
+  "insights": {
+    "title": "Insights — data-journalisme", "subtitle": "Une question, une requête SQL vérifiée, un graphique, une lecture.",
+    "placeholder": "Ex. Montre l'évolution de la note moyenne du free jazz par rapport au hard bop dans les années 60.",
+    "analyze": "Analyser", "sql": "Requête SQL", "data": "Données", "insight": "Lecture", "caveats": "Précautions", "infeasible": "Question hors du schéma disponible.",
+    "examples": ["Évolution de la note moyenne par genre et par décennie", "Quels labels obtiennent les meilleures notes ?", "Combien de critiques par année dans l'archive ?", "Lauréats du Critics Poll par catégorie en 1965"],
+    "rows": "lignes"
+  },
+  "library": {"title": "Bibliothèque", "subtitle": "Les documents indexés, par source et par type.", "all": "Tous", "search": "Filtrer par titre…", "chunks": "extraits", "open_pdf": "Ouvrir le PDF", "back": "Retour", "excerpts": "Extraits indexés", "metadata": "Métadonnées", "drop_hint": "Déposez vos PDFs dans data/raw/downbeat puis lancez `make ingest-pdf`."},
+  "observatory": {
+    "title": "Observatoire", "subtitle": "Latence, coûts, routes, cache et qualité (golden set).",
+    "corpus": "Corpus", "llm": "Appels Claude", "queries": "Questions", "evals": "Évaluations", "run_eval": "Lancer le golden set",
+    "p95": "latence p95", "avg": "latence moyenne", "cached": "en cache", "cost": "coût total", "calls": "appels", "feedback": "avis",
+    "gates_ok": "Gates passés", "gates_ko": "Gates échoués", "no_eval": "Aucune évaluation encore.", "purpose": "usage", "recent": "Dernières questions"
+  },
+  "common": {"close": "Fermer", "copy": "Copier", "copied": "Copié", "error": "Erreur", "retry": "Réessayer", "sample_badge": "corpus d'exemple", "lang": "Langue"}
+}

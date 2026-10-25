@@ -1,0 +1,18 @@
+[package]
+name = "jazzar-text"
+version = "0.1.0"
+edition = "2021"
+description = "Primitives texte haute performance pour Jazzar : nettoyage OCR, chunking, simhash"
+
+[lib]
+name = "jazzar_text"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.24", features = ["extension-module", "abi3-py312"] }
+regex = "1"
+unicode-normalization = "0.1"
+
+[profile.release]
+lto = true
+codegen-units = 1

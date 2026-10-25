@@ -1,0 +1,38 @@
+{
+  "app": {"name": "Jazzar", "tagline": "Ninety years of jazz archives, made askable.", "offline": "AI offline", "online": "AI online", "loading": "Loading…"},
+  "nav": {"ask": "Ask", "explore": "Explore", "dossiers": "Dossiers", "insights": "Insights", "library": "Library", "observatory": "Observatory"},
+  "ask": {
+    "title": "Ask the archive",
+    "subtitle": "Every claim is tied to its source. No source, no answer.",
+    "placeholder": "E.g. What rating did Kind of Blue receive, and who plays piano on Freddie Freeloader?",
+    "send": "Send", "stop": "Stop",
+    "examples": ["Who plays on A Love Supreme?", "Summarize how critics' views of free jazz evolved in the 1960s.", "Who won tenor saxophone in the 1965 Critics Poll?", "What is the average rating of fusion albums compared to hard bop?"],
+    "route": "Route", "cached": "Served from the semantic cache", "sources": "Sources", "thinking": "Searching the archive…",
+    "redirect_bi": "This question is quantitative: it was handed to the Insights engine.",
+    "feedback_up": "Helpful answer", "feedback_down": "Needs work", "feedback_thanks": "Thanks, your feedback trains the router.",
+    "filters": "Filters", "year_from": "From", "year_to": "To", "doc_types": "Types", "no_cache": "Bypass cache",
+    "cost": "cost", "latency": "latency", "model": "model"
+  },
+  "explore": {"title": "Explore the archive", "subtitle": "Hybrid search: semantic + keywords, with exact filters.", "placeholder": "Keywords or a sentence…", "search": "Search", "hybrid": "Hybrid", "keyword": "Keywords only", "results": "results", "none": "No results.", "page": "p.", "open": "Open document"},
+  "dossiers": {
+    "title": "Research dossiers", "subtitle": "A team of agents plans, researches, writes and verifies a sourced deliverable.",
+    "brief": "Brief", "placeholder": "E.g. Prepare a dossier on the Chicago jazz scene between 1965 and 1975: major reviews, emerging artists, social context.",
+    "create": "Start dossier", "status": {"queued": "Queued", "planning": "Planning", "researching": "Researching", "writing": "Writing", "reviewing": "Reviewing", "done": "Done", "failed": "Failed"},
+    "steps": "Agent log", "plan": "Plan", "sources": "Cited sources", "export": "Export Markdown", "empty": "No dossier yet.", "cost": "Cost"
+  },
+  "insights": {
+    "title": "Insights — data journalism", "subtitle": "One question, one verified SQL query, one chart, one reading.",
+    "placeholder": "E.g. Show how the average rating of free jazz compares to hard bop through the 1960s.",
+    "analyze": "Analyze", "sql": "SQL query", "data": "Data", "insight": "Reading", "caveats": "Caveats", "infeasible": "Question outside the available schema.",
+    "examples": ["Average rating by genre and decade", "Which labels get the best ratings?", "How many reviews per year in the archive?", "1965 Critics Poll winners by category"],
+    "rows": "rows"
+  },
+  "library": {"title": "Library", "subtitle": "Indexed documents, by source and type.", "all": "All", "search": "Filter by title…", "chunks": "chunks", "open_pdf": "Open PDF", "back": "Back", "excerpts": "Indexed excerpts", "metadata": "Metadata", "drop_hint": "Drop your PDFs into data/raw/downbeat then run `make ingest-pdf`."},
+  "observatory": {
+    "title": "Observatory", "subtitle": "Latency, cost, routes, cache and quality (golden set).",
+    "corpus": "Corpus", "llm": "Claude calls", "queries": "Questions", "evals": "Evaluations", "run_eval": "Run golden set",
+    "p95": "p95 latency", "avg": "avg latency", "cached": "cached", "cost": "total cost", "calls": "calls", "feedback": "feedback",
+    "gates_ok": "Gates passed", "gates_ko": "Gates failed", "no_eval": "No evaluation yet.", "purpose": "purpose", "recent": "Recent questions"
+  },
+  "common": {"close": "Close", "copy": "Copy", "copied": "Copied", "error": "Error", "retry": "Retry", "sample_badge": "sample corpus", "lang": "Language"}
+}

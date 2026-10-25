@@ -1,0 +1,16 @@
+.env
+*.log
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+.next/
+data/raw/**
+!data/raw/**/.gitkeep
+data/cache/
+*.pyc
+rust/jazzar-text/target/
+frontend/.env.local
+*.egg-info/
+.DS_Store
