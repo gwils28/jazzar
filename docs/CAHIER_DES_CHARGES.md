@@ -41,6 +41,11 @@ API (préfixe `/api`) : `health`, `stats`, `ask`, `feedback`, `queries`, `search
   - Les pubs pleine page restent sans texte : choix assumé (une passe `--redo-ocr` les récupérerait si besoin).
   - Les folios « 12 DOWNBEAT JULY 2025 » sont filtrés à l'extraction ; les chunks de moins de 60 caractères ne sont pas indexés.
   - Nommage `DBYY_MM` → titre « DownBeat — July 2025 », date au 1er du mois.
+- **Archives historiques (1937-1999)** : worldradiohistory.com héberge 1 280 PDF (1 250 numéros + 30 yearbooks),
+  catalogués dans `~/Documents/Jazz_project/downbeat_worldradiohistory_catalogue.csv`. Le site a retiré l'index
+  public, bloque les clients non-navigateur et interdit les robots IA : **pas de téléchargement automatisé**.
+  Acquisition à la main ou avec l'accord du responsable du site ; les noms de fichiers (`Down-Beat-1965-08-12`,
+  `DB 1961-08-03`, `DB-1998-06`) devront être reconnus par `guess_date` avant ingestion.
 - **Corpus ouvert** : Wikipedia (ingestion existante, CC BY-SA 4.0) ; MusicBrainz (table prévue, pas d'ingestion).
 - **Corpus d'exemple** fictif (`data/samples/`, `source=sample`) : bouchon de développement, à retirer à terme.
 
@@ -115,3 +120,4 @@ Par priorité. Mettre à jour l'état ici quand une étape avance.
 | 2026-10-25 | Trois piliers dès le MVP ; corpus ouvert + PDFs DownBeat ; fail-open obligatoire ; ports 5433 / 8100 / 3000. |
 | 2026-10-28 | Corpus DownBeat 2025 ingéré (12 numéros). OCR `--skip-text`, pubs exclues, folios filtrés, chunks < 60 caractères écartés. Nommage `DBYY_MM` reconnu. |
 | 2026-10-28 | Identité visuelle validée : logo croche-quasar, favicon, tokens `--logo-*`. |
+| 2026-10-28 | Archives 1937-1999 : catalogue des 1 280 PDF de worldradiohistory.com établi ; pas de scraper (index retiré, scripts bloqués, robots.txt). Acquisition manuelle ou sur accord. |
