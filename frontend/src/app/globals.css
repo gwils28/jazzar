@@ -24,6 +24,9 @@
   --info: #8a90b3;
   --ok: #8fbf8a;
   --ring: rgba(244, 162, 97, 0.45);
+  /* Logo (croche-quasar) : tête du disque et cœur. */
+  --logo-head: var(--jz-orange);
+  --logo-core: var(--jz-cream);
 }
 
 :root[data-theme="light"] {
@@ -41,6 +44,8 @@
   --info: var(--jz-slate);
   --ok: #3f7a3a;
   --ring: rgba(201, 116, 47, 0.4);
+  --logo-head: var(--jz-bordeaux);
+  --logo-core: var(--jz-orange);
 }
 
 @theme inline {
