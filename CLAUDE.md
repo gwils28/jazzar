@@ -16,6 +16,7 @@ Monorepo : `backend/` (Python 3.12, uv, FastAPI), `frontend/` (Next.js 16, Tailw
 2. `make api` et `make web`.
 3. Tests : `make test` (backend), `cd frontend && npx tsc --noEmit && npm run build`.
 4. Qualité RAG : `make eval` (nécessite une clé API ; coût ≈ quelques centimes).
+5. `docs/CAHIER_DES_CHARGES.md` est la référence du périmètre : mettre à jour son état, sa feuille de route et son journal des décisions à chaque évolution de feature ou décision.
 
 ## Pièges connus
 - Next 16 : lire `frontend/node_modules/next/dist/docs/` avant d'utiliser une API Next inconnue (cacheComponents activé, `proxy.ts` remplace `middleware.ts`).

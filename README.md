@@ -58,4 +58,4 @@ uv run pytest -q
 - **SQL généré** : une seule instruction SELECT, tables en liste blanche, `LIMIT` forcé, rôle Postgres lecture seule, `statement_timeout`.
 - **Coûts** : chaque appel Claude est tracé (`llm_calls`) avec tokens, cache et coût ; le système prompt est mis en cache (prompt caching) ; le petit modèle sert au routage et aux extractions.
 
-Voir `docs/ARCHITECTURE.md` pour le détail des décisions.
+Voir `docs/CAHIER_DES_CHARGES.md` pour le périmètre, les exigences et la feuille de route, et `docs/ARCHITECTURE.md` pour le détail des décisions.
