@@ -109,6 +109,11 @@ async def get_or_create_source(session: AsyncSession, kind: str, name: str, **kw
     return src
 
 
+# Un chunk plus court qu'un crédit photo ou un intertitre (« SHERVIN LAINEZ », « CRITICS CAPSULES »)
+# n'apporte rien à la recherche et remonte à tort sur les requêtes par mots-clés.
+MIN_CHUNK_CHARS = 60
+
+
 def _chunk_document(raw: RawDocument) -> list[tuple[int | None, str, int]]:
     """Retourne (page, texte, tokens). Le chunking se fait page par page pour garder la page de citation."""
     s = get_settings()
@@ -117,6 +122,8 @@ def _chunk_document(raw: RawDocument) -> list[tuple[int | None, str, int]]:
         if not page.text.strip():
             continue
         for _start, _end, text in split_chunks(page.text, s.chunk_target_tokens, s.chunk_overlap_tokens):
+            if len(text.strip()) < MIN_CHUNK_CHARS:
+                continue
             out.append((page.number, text, estimate_tokens(text)))
     return out
 

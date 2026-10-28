@@ -217,7 +217,8 @@ async def _fail_open(session, trace_id, question, lang, filters, hits, t0, cost,
     lines = [intro, ""]
     for i, h in enumerate(hits, start=1):
         when = h.published_on.isoformat() if h.published_on else (str(h.year) if h.year else "")
-        lines.append(f"- **{h.title}** ({when}) [{i}] — {h.text[:300].strip()}…")
+        meta = ", ".join(x for x in (when, f"p. {h.page}" if h.page else "") if x)
+        lines.append(f"- **{h.title}**" + (f" ({meta})" if meta else "") + f" [{i}] — {h.text[:300].strip()}…")
     text = "\n".join(lines)
     yield {"type": "notice", "text": f"fail-open: {reason}"}
     yield {"type": "token", "text": text}
